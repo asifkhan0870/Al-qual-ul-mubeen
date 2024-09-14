@@ -20,6 +20,9 @@ const BlogTitle = styled.h2`
 
 const BlogContent = styled.p`
   margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 `;
 
 const blogs = [

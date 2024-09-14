@@ -6,6 +6,9 @@ const Heading = styled.div`
   display: flex;
   text-align: center;
   background: red;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 `;
 
 const Blog = () => {

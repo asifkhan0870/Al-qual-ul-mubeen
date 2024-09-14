@@ -53,7 +53,7 @@ const NavLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    color: red;
   }
 `;
 
@@ -148,20 +148,23 @@ function Navbar() {
           <NavLink href="/">Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/blog">Quran</NavLink>
+          <NavLink href="/quran">Quran</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/blog">Hadith</NavLink>
+          <NavLink href="/hadith">Hadith</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/blog">Fiqh</NavLink>
+          <NavLink href="/fiqh">Fiqh</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/blog">Brailvi+Deobandi+Ahle Hadith Ikhtilaaf</NavLink>
+          <NavLink href="/usool">Usool</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/bdai">Brailvi+Deobandi+Ahle Hadith Ikhtilaaf</NavLink>
         </NavItem>
 
         <NavItem>
-          <NavLink href="/blog">Sunni-Shia Ikhtilaaf</NavLink>
+          <NavLink href="/ssi">Sunni-Shia Ikhtilaaf</NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="/about">About</NavLink>
