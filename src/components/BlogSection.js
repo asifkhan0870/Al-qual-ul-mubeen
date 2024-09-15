@@ -4,6 +4,10 @@ import styled from "styled-components";
 
 const BlogContainer = styled.div`
   padding: 20px;
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 `;
 
 const BlogPost = styled.div`
@@ -20,9 +24,11 @@ const BlogTitle = styled.h2`
 
 const BlogContent = styled.p`
   margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+
+  display: flex;
+  flex-direction: row;
+  // gap: 1rem;
+  // background: red;
 `;
 
 const blogs = [
