@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
-
+import Dropdown from "./QuranDropDown";
 // Styled Components
 const Nav = styled.nav`
   background: #333;
@@ -12,7 +12,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 70px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -140,6 +140,20 @@ function Navbar() {
     document.body.className = !darkMode ? "dark-mode" : "";
   };
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
+  };
+
   return (
     <Nav>
       <Logo src="logo.webp"></Logo>
@@ -147,8 +161,17 @@ function Navbar() {
         <NavItem>
           <NavLink href="/">Home</NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink href="/quran">Quran</NavLink>
+        <NavItem
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <NavLink as="span" onClick={handleDropdownToggle}>
+            Quran
+          </NavLink>
+          <Dropdown
+            isOpen={dropdownOpen}
+            toggleDropdown={handleDropdownToggle}
+          />
         </NavItem>
         <NavItem>
           <NavLink href="/hadith">Hadith</NavLink>
